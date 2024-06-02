@@ -6,6 +6,63 @@
     <!-- Page Metadata -->
     <meta charset="UTF-8">
     <title>First Page</title>
+    <style>
+        /* ---------- CSS Selectors ---------- */
+        /* selector {
+            property: value;
+            property: value;
+        } */
+
+        /* ----- 1: tag selectors */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            margin: 20px;
+            text-shadow: 2px 2px 10px black;
+            color: white;
+        }
+
+        h2 {
+            background-color: aquamarine;
+            color: darkblue;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid blue;
+            box-shadow: 2px 2px 10px black;
+        }
+
+        p {
+            background-color: lightgray;
+            padding: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        span {
+            background-color: antiquewhite;
+        }
+
+        div {
+            background-color: cadetblue;
+        }
+
+        /* ----- 2: class selectors */
+        .important {
+            font-family: fantasy;
+            font-size: 20px;
+            color: blueviolet;
+            background-color: transparent;
+        }
+
+        /* ----- 3: id selectors */
+        #main-address {
+            background-color: blue;
+            color: yellow;
+        }
+    </style>
 </head>
 
 <body>
@@ -17,15 +74,29 @@
     <h5>Introduction to Selectors</h5>
     <h6>Introduction to Semantic</h6>
 
-    <p>This is the first paragraph!</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, illum corrupti iste rerum nulla deserunt,
+    <p style="padding: 10px; color: white; background-color: darkblue;">This is the first paragraph!</p>
+    <p>Lorem ipsum <span class="important">dolor sit amet</span> consectetur adipisicing elit. Provident, illum
+        corrupti iste rerum nulla deserunt,
         porro saepe asperiores blanditiis dolor perspiciatis maxime nisi placeat temporibus unde sed. Impedit,
         recusandae facilis?</p>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, nesciunt!</p>
 
+    <p>Inline tag: span<br>Block: div</p>
+
+    <div>Span elements:
+        <span>Span 1</span>
+        <span>Span 2</span>
+        <span>Span 3</span>
+    </div>
+    <div>Div elements:
+        <div>div 1</div>
+        <div>div 2</div>
+        <div>div 3</div>
+    </div>
+
     <!-- emmet: article>(p>lorem5)*3 -->
     <article>
-        <p>Lorem ipsum dolor sit amet.</p>
+        <p class="important">Lorem ipsum dolor sit amet.</p>
         <p>A, veritatis iste? Deleniti, consequuntur!</p>
         <p>Dicta, voluptas fugit. Recusandae, iure!</p>
     </article>
@@ -34,7 +105,8 @@
 
     <h2>Logical vs Phisical tags</h2>
     <!-- Logical / Semantic Tags (strong, em, article...) -->
-    <p>The <strong>HyperText Markup Language</strong> or HTML is the standard <em>markup language</em> for documents
+    <p>The <strong class="important">HyperText Markup Language</strong> or HTML is the standard <em>markup language</em>
+        for documents
         designed to
         be displayed in a
         web browser.</p>
@@ -60,7 +132,7 @@
     <blockquote>I need to do my homework.</blockquote>
 
     <h3>You can find us</h3>
-    <address>Soborna St, 16 ... Rivne, Ukraine</address>
+    <address id="main-address">Soborna St, 16 ... Rivne, Ukraine</address>
 
     <span>Hello</span>
     <!-- all white space characters render as one space ' ' -->

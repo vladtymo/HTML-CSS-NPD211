@@ -6,6 +6,77 @@
     <!-- Page Metadata -->
     <meta charset="UTF-8">
     <title>First Page</title>
+
+    <style>
+        /* CSS Selectors */
+        /* 
+            selector {
+                property: value;
+                property: value;
+                ...
+            } 
+        */
+        /* ------------ tag selectors ------------ */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            background-color: brown;
+            color: white;
+            text-transform: uppercase;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 2px 2px 10px black;
+
+            /* all sides */
+            /* border: 10px; */
+            /* top-left/bottom-right top-right/bottom-left */
+            /* border-radius: 6px 0; */
+            /* each side */
+            border-radius: 6px 0 10px 40px;
+        }
+
+        h2,
+        h3 {
+            text-decoration: underline;
+        }
+
+        p {
+            text-align: justify;
+            background-color: rgb(232, 232, 232);
+            padding: 4px;
+            border-radius: 4px;
+        }
+
+        strong {
+            background-color: blanchedalmond;
+            padding: 2px;
+        }
+
+        mark {
+            background-color: transparent;
+            color: blueviolet;
+            font-family: fantasy;
+            font-size: larger;
+        }
+
+        /* ------------ class selectors ------------ */
+        .bordered {
+            border: 1px solid darkred;
+            padding: 2px;
+        }
+
+        .important {
+            background-color: black;
+            color: white;
+            padding: 2px;
+        }
+
+        .red {
+            color: red;
+        }
+    </style>
 </head>
 
 <body>
@@ -17,16 +88,17 @@
     <h5>Introduction to Selectors</h5>
     <h6>Introduction to Semantic</h6>
 
-    <p>This is the first paragraph!</p>
+    <p style="background-color: cadetblue; color: white; padding: 10px;">This is the first paragraph!</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, illum corrupti iste rerum nulla deserunt,
-        porro saepe asperiores blanditiis dolor perspiciatis maxime nisi placeat temporibus unde sed. Impedit,
+        porro <span class="red">saepe asperiores blanditiis</span> dolor perspiciatis maxime nisi placeat temporibus
+        unde sed. Impedit,
         recusandae facilis?</p>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, nesciunt!</p>
 
     <!-- emmet: article>(p>lorem5)*3 -->
     <article>
         <p>Lorem ipsum dolor sit amet.</p>
-        <p>A, veritatis iste? Deleniti, consequuntur!</p>
+        <p class="bordered important">A, veritatis iste? Deleniti, consequuntur!</p>
         <p>Dicta, voluptas fugit. Recusandae, iure!</p>
     </article>
     <hr>
@@ -34,7 +106,8 @@
 
     <h2>Logical vs Phisical tags</h2>
     <!-- Logical / Semantic Tags (strong, em, article...) -->
-    <p>The <strong>HyperText Markup Language</strong> or HTML is the standard <em>markup language</em> for documents
+    <p>The <strong class="bordered">HyperText Markup Language</strong> or HTML is the standard <em>markup language</em>
+        for documents
         designed to
         be displayed in a
         web browser.</p>
@@ -62,21 +135,17 @@
     <h3>You can find us</h3>
     <address>Soborna St, 16 ... Rivne, Ukraine</address>
 
-    <span>Hello</span>
-    <!-- all white space characters render as one space ' ' -->
-    <span>World</span>
-
     <hr>
     <p>
-        <strong>Tag mark:</strong> This is a <mark>highlited</mark> text!<br>
+        <strong class="important">Tag mark:</strong> This is a <mark>highlited</mark> text!<br>
         <strong>Tag dfn:</strong> <dfn>Programming language</dfn> - system of notation for writing computer
         programs.<br>
         <strong>Tag sub:</strong> Formula of water: H<sub>2</sub>O<br>
-        <strong>Tag sup:</strong> Pythagorean theorem: C<sup>2</sup> = A<sup>2</sup> + B<sup>2</sup><br>
+        <strong>Tag sup:</strong> Pythagorean theorem: C<sup>2</sup> = A<sup>2</sup> + B<sup>2</sup>
         <strong>Tag var:</strong> description: <var>C</var> - hypotenuse being<br>
         <strong>Tag samp:</strong> Try to find a solution: <samp>2 + 2 * 2</samp><br>
         <strong>Tag kbd:</strong> Open command pallete shortcut: <kbd>Ctrl + Shift + P</kbd><br>
-        <strong>Tag code:</strong> for loop <code>&lt;html&gt; for (int i = 0; i &lt; 10; ++i) { ... }</code>
+        <strong>Tag code:</strong> for loop <code>for (int i = 0; i &lt; 10; ++i) { ... }</code>
     </p>
 
     <h3>Code Sample</h3>
@@ -98,7 +167,7 @@
     </pre>
 
     <center>
-        <img width="300" src="https://miro.medium.com/v2/resize:fit:960/1*OlyP02fRFe8pEkJgb6vGTQ.png" alt="HTML CSS">
+        <img width="300" src="https://letdiv.com/wp-content/uploads/2021/06/html-css-course.jpg" alt="HTML CSS">
     </center>
 </body>
 
