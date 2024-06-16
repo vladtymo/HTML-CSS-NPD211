@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <style>
+        table {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 100%;
+            min-width: 650px;
+            max-width: 800px;
+            margin: 0 auto;
+            border-collapse: collapse;
+
+            color: white;
+            text-align: center;
+        }
+
+        caption {
+            text-align: right;
+            text-transform: uppercase;
+            color: rgb(59, 59, 59);
+            font-weight: bold;
+        }
+
+        th,
+        td {
+            padding: 16px 0;
+        }
+
+        th {
+            text-transform: uppercase;
+        }
+
+        thead {
+            border-bottom: 1px solid white;
+        }
+
+        tfoot {
+            border-top: 1px solid white;
+        }
+
+        .first {
+            color: rgb(97, 97, 97);
+        }
+
+        td.first {
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        td span {
+            border: 2px solid white;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            line-height: 25px;
+            font-weight: bold;
+        }
+
+        /* ------ set column background ------ */
+        .col-1 {
+            background-color: #dddddd;
+            width: auto;
+        }
+
+        .col-2 {
+            background-color: #17d0d3;
+            width: 17%;
+        }
+
+        .col-3 {
+            background-color: #8ac149;
+            width: 17%;
+        }
+
+        .col-4 {
+            background-color: #feca28;
+            width: 17%;
+        }
+
+        .col-5 {
+            background-color: #f44236;
+            width: 17%;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>Title Table</caption>
+        <colgroup>
+            <!-- emmet: col.col-$*5 -->
+            <col class="col-1">
+            <col class="col-2">
+            <col class="col-3">
+            <col class="col-4">
+            <col class="col-5">
+        </colgroup>
+
+        <thead>
+            <tr>
+                <th class="first">Specification</th>
+                <th>Free</th>
+                <th>Basic</th>
+                <th>Standart</th>
+                <th>Premium</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th class="first">Price</th>
+                <th>$ 0.00</th>
+                <th>$ 9.99</th>
+                <th>$ 19.99</th>
+                <th>$ 29.99</th>
+            </tr>
+            </thead>
+
+            <!-- emmet: tbody>tr*6>td*5>{+} -->
+            <tbody>
+                <tr>
+                    <td class="first">Lorem ipsum dolor</td>
+                    <td><span>-</span></td>
+                    <td><span>+</span></td>
+                    <td><span>-</span></td>
+                    <td><span>+</span></td>
+                </tr>
+                <tr>
+                    <td class="first">Ratione deserunt modi</td>
+                    <td><span>+</span></td>
+                    <td><span>-</span></td>
+                    <td><span>+</span></td>
+                    <td><span>+</span></td>
+                </tr>
+                <tr>
+                    <td class="first">Vel maiores odio</td>
+                    <td><span>+</span></td>
+                    <td><span>-</span></td>
+                    <td><span>+</span></td>
+                    <td><span>-</span></td>
+                </tr>
+                <tr>
+                    <td class="first">Minus vel aperiam natus</td>
+                    <td><span>+</span></td>
+                    <td><span>+</span></td>
+                    <td><span>+</span></td>
+                    <td><span>+</span></td>
+                </tr>
+                <tr>
+                    <td class="first">Provid minima sapiente</td>
+                    <td><span>+</span></td>
+                    <td><span>+</span></td>
+                    <td><span>+</span></td>
+                    <td><span>+</span></td>
+                </tr>
+                <tr>
+                    <td class="first">Eveniet eaque excepturi</td>
+                    <td><span>+</span></td>
+                    <td><span>+</span></td>
+                    <td><span>+</span></td>
+                    <td><span>+</span></td>
+                </tr>
+            </tbody>
+    </table>
+</body>
+
+</html>
